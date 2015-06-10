@@ -6,7 +6,7 @@ if (Meteor.isClient) {
     //在body上插入作用區域
     $('body').append('<div id="clickMe"><button type="button">Click Me</button> You have pressed the button <span></span> times.</div>');
 
-    //宣告一個reactive computation
+    //宣告一個reactive computation並執行之
     Tracker.autorun(function() {
       //將#clickMe的span內容設定為counter的值
       $('#clickMe').find('span').text( Session.get('counter') );
